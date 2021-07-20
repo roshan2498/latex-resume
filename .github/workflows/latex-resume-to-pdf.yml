@@ -12,7 +12,7 @@ jobs:
       - name: Find LaTeX resume path
         run: echo "::set-output name=LATEX_PATH::$(find *.tex -type f -printf "%p")"
         id: find-latex-path
-      - name: Calculate pdf output filename
+      - name: Calculate pdf output path
         run: echo "::set-output name=PDF_PATH::$(echo ${{ steps.find-latex-path.outputs.LATEX_PATH }} | cut -d "." -f 1 | tr -d "\n").pdf"
         id: calculate-pdf-path
       - name: Compile LaTeX document
