@@ -23,5 +23,3 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: ${{ steps.calculate-pdf-path.outputs.PDF_PATH }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
